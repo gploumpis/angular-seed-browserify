@@ -6,28 +6,31 @@
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.4.1",
     "browserify": "^11.0.0",
+    "browserify-css": "^0.6.1",
+    "browserify-istanbul": "^0.2.1",
+    "browserify-shim": "^3.8.10",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "http-server": "^0.8.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.3",
+    "karma-browserify": "^4.2.1",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.4.2",
     "karma-firefox-launcher": "^0.1.6",
     "karma-jasmine": "^0.3.6",
-    "shelljs": "^0.5.1",
-    "jasmine-core": "^2.3.4",
     "karma-junit-reporter": "^0.3.3",
-    "karma-chrome-launcher": "^0.2.0",
-    "http-server": "^0.8.0",
-    "bower": "^1.4.1",
-    "protractor": "^2.1.0",
-    "karma": "^0.13.3",
-    "gulp": "^3.9.0",
-    "vinyl-buffer": "^1.0.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "vinyl-source-stream": "^1.1.0",
-    "gulp-util": "^3.0.6",
-    "gulp-uglify": "^1.2.0",
     "lodash.assign": "^3.2.0",
-    "watchify": "^3.3.0",
-    "browserify-css": "^0.6.1",
     "partialify": "^3.1.5",
-    "browserify-shim": "^3.8.10"
+    "protractor": "^2.1.0",
+    "shelljs": "^0.5.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.0"
   },
   "scripts": {
     "postinstall": "bower install",
@@ -44,12 +47,15 @@
   },
   "browserify": {
     "transform": [
-      "browserify-shim"
+      "browserify-shim",
+      "partialify",
+      "browserify-css"
     ]
   },
   "browser": {
     "angular": "./app/bower_components/angular/angular.js",
-    "ngRoute": "./app/bower_components/angular-route/angular-route.js"
+    "ngRoute": "./app/bower_components/angular-route/angular-route.js",
+    "ngMock": "./app/bower_components/angular-mocks/angular-mocks.js"
   },
   "browserify-shim": {
     "angular": {
@@ -60,6 +66,17 @@
         "angular:angular"
       ],
       "exports": "angular.module('ngRoute')"
+    },
+    "ngMock": {
+      "depends": [
+        "angular:angular"
+      ],
+      "exports": "angular.mock"
     }
+  },
+  "browserify-css": {
+    "autoInject": true,
+    "minify": true,
+    "rootDir": "./dist"
   }
 }

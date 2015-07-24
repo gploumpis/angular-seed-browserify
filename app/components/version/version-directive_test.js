@@ -1,11 +1,13 @@
-'use strict';
+(function(angular,ngMock){
 
-describe('myApp.version module', function() {
-  beforeEach(module('myApp.version'));
+'use strict';
+var modVersion = require('./version.js');
+describe( modVersion.name, function() {
+  beforeEach(ngMock.module(modVersion.name));
 
   describe('app-version directive', function() {
     it('should print current version', function() {
-      module(function($provide) {
+      ngMock.module(function($provide) {
         $provide.value('version', 'TEST_VER');
       });
       inject(function($compile, $rootScope) {
@@ -15,3 +17,13 @@ describe('myApp.version module', function() {
     });
   });
 });
+
+
+})(
+require('angular'),
+require('ngMock')
+);
+
+
+
+

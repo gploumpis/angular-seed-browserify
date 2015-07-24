@@ -9,7 +9,7 @@ var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var assign = require('lodash.assign');
-var partialify = require('partialify')
+
 // add custom browserify options here
 var browserifyOpts = {
   entries: ['./app/app.js'],
@@ -21,8 +21,8 @@ b.on('update', bundle); // on any dep update, runs the bundler
 b.on('log', gutil.log); // output build logs to terminal
 
 // add transformations here
-b.transform(partialify);
-b.transform('browserify-css', { autoInject: true });
+//b.transform(partialify);
+//b.transform('browserify-css', { autoInject: true });
 
 gulp.task('js', bundle); // so you can run `gulp js` to build the file
 gulp.task('assets',assets);

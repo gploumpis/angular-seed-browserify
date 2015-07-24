@@ -1,8 +1,11 @@
+(function(angular,ngMock){
+
 'use strict';
+var modView1 = require('./view1.js');
 
-describe('myApp.view1 module', function() {
+describe(modView1.name, function() {
 
-  beforeEach(module('myApp.view1'));
+  beforeEach(ngMock.module(modView1.name));
 
   describe('view1 controller', function(){
 
@@ -14,3 +17,18 @@ describe('myApp.view1 module', function() {
 
   });
 });
+
+
+
+})(
+require('angular'),
+require('ngMock')
+);
+
+
+
+
+
+
+
+
