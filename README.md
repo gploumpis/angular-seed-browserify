@@ -1,5 +1,10 @@
 # angular-seed — the seed for AngularJS apps
 
+npm install -g gulp
+
+if you are a windows user u need to install python 2.7.6 and set PYTHON environment variable. 
+Also it will be wise to run commands as administrator
+
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
 You can use it to quickly bootstrap your angular webapp projects and dev environment for these
 projects.

@@ -1,6 +1,7 @@
+(function(angular){
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+module.exports = angular.module('myApp.view1', [ require('ngRoute').name])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
@@ -12,3 +13,7 @@ angular.module('myApp.view1', ['ngRoute'])
 .controller('View1Ctrl', [function() {
 
 }]);
+
+})(require('angular'));
+
+

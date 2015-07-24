@@ -1,8 +1,11 @@
+(function(angular){
 'use strict';
 
-angular.module('myApp.version', [
-  'myApp.version.interpolate-filter',
-  'myApp.version.version-directive'
+module.exports = angular.module('myApp.version', [
+ require('./interpolate-filter.js').name,
+  require('./version-directive.js').name
 ])
 
-.value('version', '0.1');
+.value('version', require('../../../package.json').version);
+
+})(require('angular'))
