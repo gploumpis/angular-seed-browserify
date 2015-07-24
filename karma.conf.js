@@ -73,9 +73,8 @@ module.exports = function(config){
     browserify: {
       debug: true
       ,transform: [ istanbul({
-          ignore: ['**/node_modules/**', '**/*_test.js'],
-    })]
-      //,extensions: ['.js','.html']
+          ignore: ['**/node_modules/**','**/bower_components/**', '**/*.html' ,'**/*_test.js'],
+      })]
     }
     
 

@@ -24,11 +24,3 @@ describe(modView1.name, function() {
 require('angular'),
 require('ngMock')
 );
-
-
-
-
-
-
-
-

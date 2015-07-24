@@ -21,8 +21,6 @@ b.on('update', bundle); // on any dep update, runs the bundler
 b.on('log', gutil.log); // output build logs to terminal
 
 // add transformations here
-//b.transform(partialify);
-//b.transform('browserify-css', { autoInject: true });
 
 gulp.task('js', bundle); // so you can run `gulp js` to build the file
 gulp.task('assets',assets);
@@ -30,8 +28,7 @@ gulp.task('default', ['js','assets']);
 
 
 function assets(){
-	 return gulp.src(['app/app.css','app/index.html'])
-	 .pipe(gulp.dest('dist/'));
+	 return gulp.src(['app/index.html']).pipe(gulp.dest('dist/'));
 }
 
 function bundle() {

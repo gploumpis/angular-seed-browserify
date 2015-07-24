@@ -42,8 +42,7 @@
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
-    "protractor": "protractor e2e-tests/protractor.conf.js",
-    "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + sed(/sourceMappingURL=angular-loader.min.js.map/,'sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map','app/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\""
+    "protractor": "protractor e2e-tests/protractor.conf.js"
   },
   "browserify": {
     "transform": [
@@ -55,7 +54,9 @@
   "browser": {
     "angular": "./app/bower_components/angular/angular.js",
     "ngRoute": "./app/bower_components/angular-route/angular-route.js",
-    "ngMock": "./app/bower_components/angular-mocks/angular-mocks.js"
+    "ngMock": "./app/bower_components/angular-mocks/angular-mocks.js",
+    "ui.router":"./app/bower_components/angular-ui-router/release/angular-ui-router.js",
+    "modernizr":"./app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"
   },
   "browserify-shim": {
     "angular": {
@@ -67,16 +68,23 @@
       ],
       "exports": "angular.module('ngRoute')"
     },
+    "ui.router": {
+      "depends": [
+        "angular:angular"
+      ],
+      "exports": "angular.module('ui.router')"
+    },
     "ngMock": {
       "depends": [
         "angular:angular"
       ],
       "exports": "angular.mock"
+    },
+    "modernizr": {
+      "exports": "global:Modernizr"
     }
   },
   "browserify-css": {
-    "autoInject": true,
-    "minify": true,
     "rootDir": "./dist"
   }
 }
