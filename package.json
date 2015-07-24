@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "angular-seed-browserify",
   "private": true,
   "version": "1.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "Integration of Angular, Browserify and gulp",
+  "repository": "https://github.com/gploumpis/angular-seed-browserify",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.4.1",
