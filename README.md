@@ -35,7 +35,7 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 
 ### Clone angular-seed
 
-Clone the angular-seed repository using [git][git]:
+Clone the angular-seed repository using [git](http://git-scm.com/):
 
 ```
 git clone https://github.com/gploumpis/angular-seed-browserify.git
