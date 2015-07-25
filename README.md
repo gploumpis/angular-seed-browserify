@@ -8,13 +8,13 @@ and dev environment for these projects.
 The seed contains a sample AngularJS application and is preconfigured to install the Angular
 framework and a bunch of development and testing tools for instant web development gratification.
 
-The seed app demonstrates a prety nice integration of Angular and [Browserify](http://browserify.org)
+The seed app demonstrates a pretty nice integration of Angular and [Browserify](http://browserify.org)
 and serves as a template for self contained consumable modules.
 ### Features
 
 * Structure that makes the directory and app structure consistent with the architectural design of the app and helps tooling.
 * Developers always work and test code on a minified and packaged version of the app (source maps included), same as a production environment
-* Developers can have their test suits always running so as to immediatelly identify breaking changes
+* Developers can have their test suits always running so as to immediately identify breaking changes
 * Code coverage
 * Addition of new test cases with no configuration
 * Script dependencies are easy to track 
@@ -94,7 +94,7 @@ and set PYTHON environment variable (some node dependencies are rebuild on insta
 Also it will be wise to run your shell as administrator
 ### Build the Application
 
-Before you run you application it needs to be build. You build the app by  
+Before you run your application it needs to be build. You build the app by  
 
 ```
 gulp
