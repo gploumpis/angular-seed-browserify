@@ -20,6 +20,7 @@ and serves as a template for self contained consumable modules.
 * Script dependencies are easy to track 
 * Module composition
 * Promotes DRY principle and the Module pattern
+* Showcases protractor page objects
 
 ## Getting Started
 
@@ -233,5 +234,4 @@ configure your server to serve the files under the `dist/` directory.
 * Integrate with travis for CI
 * Showcase i18n
 * Incorporate live reload of SPA on build
-* Showcase protractor Page Objects
 * Showcase routing and state composition 

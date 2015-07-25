@@ -4,7 +4,7 @@ exports.config = {
   directConnect: true,
   
   specs: [
-    '*.js'
+    '*_spec.js'
   ],
 
   capabilities: {
