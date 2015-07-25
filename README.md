@@ -160,7 +160,12 @@ are run with the [Protractor][protractor] End-to-End test runner.  It uses nativ
 special features for Angular applications.
 
 * the configuration is found at `e2e-tests/protractor-conf.js`
-* the end-to-end tests are found in `e2e-tests/scenarios.js`
+* the end-to-end tests are found in `e2e-tests/scenarios_spec.js`
+
+There to kinds of files in the project:
+
+* _spec.js these are the actual test
+* _page.js helpers that wrap functionality and element access so as protractor related code not to leak in to tests  
 
 Protractor simulates interaction with our web app and verifies that the application responds
 correctly. Therefore, our web server needs to be serving up the application, so that Protractor
@@ -231,7 +236,7 @@ configure your server to serve the files under the `dist/` directory.
 
 ### TODO
 
-* Integrate with travis for CI
 * Showcase i18n
+* Showcase routing across components 
+* Integrate with travis for CI
 * Incorporate live reload of SPA on build
-* Showcase routing and state composition 
