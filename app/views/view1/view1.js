@@ -9,12 +9,8 @@ module.exports = angular.module('app.views.view1', [
       $stateProvider
         .state("app.view1", {
           url:'/view1',
-          controller: 'View1Ctrl',		
           template: require('./view1.html') 
         });
-
-}])
-.controller('View1Ctrl', [function View1Ctrl() {
 
 }]);
 
