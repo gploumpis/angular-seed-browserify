@@ -3,6 +3,7 @@
 
 module.exports = angular.module('app.views', [ 
 	require('ui.router').name,
+	require('./views.views-controller.js').name,
 	require('./view1/view1.js').name,
   	require('./view2/view2.js').name,
   	require('../components/version/version.js').name
@@ -16,14 +17,8 @@ module.exports = angular.module('app.views', [
       template: require('./views.html')/* inline partials within module */ 
     });
 
-}])
-.controller('ViewsCtrl', ['$scope',function ViewsCtrl($scope) { /*controllers should move to a file and angular moduleof their own for testing purpoces*/
-	var appPackage = require('../../package.json');
-	$scope.project={
-		name:appPackage.name,
-		description:appPackage.description
-	};
 }]);
+
 
 
 })(require('angular'));
