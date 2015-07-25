@@ -233,4 +233,5 @@ configure your server to serve the files under the `dist/` directory.
 * Integrate with travis for CI
 * Showcase i18n
 * Incorporate live reload of SPA on build
-* Showcase protractor Page Objects 
+* Showcase protractor Page Objects
+* Showcase routing and state composition 
