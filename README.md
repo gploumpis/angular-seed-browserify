@@ -14,8 +14,8 @@ and serves as a template for self contained consumable modules.
 
 * Structure that makes the directory and app structure consistent with the architectural design of the app and helps tooling.
 * Developers always work and test code on a minified and packaged version of the app (source maps included), same as a production environment
-* Developers can have their test suits always running so as to immediatelly identify braking changes
-* Code coverage reports
+* Developers can have their test suits always running so as to immediatelly identify breaking changes
+* Code coverage
 * Addition of new test cases with no configuration
 * Script dependencies are easy to track 
 * Module composition
