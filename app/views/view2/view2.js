@@ -2,7 +2,7 @@
 
 'use strict';
 
-module.exports =angular.module('app.view2', [
+module.exports =angular.module('app.views.view2', [
 	require('ui.router').name
 ])
 .config(['$stateProvider',  function($stateProvider) {
@@ -15,7 +15,7 @@ module.exports =angular.module('app.view2', [
         });
 
 }])
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', [function View2Ctrl() {
 
 }]);
 

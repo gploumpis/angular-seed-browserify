@@ -1,7 +1,7 @@
 (function(angular){
 'use strict';
 
-module.exports = angular.module('app.view1', [ 
+module.exports = angular.module('app.views.view1', [ 
 	require('ui.router').name
 ])
 .config(['$stateProvider',  function($stateProvider) {
@@ -14,7 +14,7 @@ module.exports = angular.module('app.view1', [
         });
 
 }])
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', [function View1Ctrl() {
 
 }]);
 

@@ -12,20 +12,10 @@ require('./app.css');
 // Declare app level module which depends on views, and components
 module.exports =  angular.module('app', [
   require('ui.router').name, /*require external dependencies such as angular modules by their name instead of by file forincreased readability*/
-  require('./views/view1/view1.js').name, /*require internal dependencies by filename*/
-  require('./views/view2/view2.js').name,
-  require('./components/version/version.js').name
+  require('./views/views.js').name /*require internal dependencies by filename*/  
 ])
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,   $urlRouterProvider) {
-
+.config(['$urlRouterProvider', function($urlRouterProvider) {
  	  $urlRouterProvider.otherwise('/view1');
-
-      $stateProvider
-        .state("app", {
-          abstract: true,
-          template: require('./views/views.html')/* inline partials within module */ 
-        });
-
 }])
 .run(['$rootScope', '$state', '$stateParams',function ($rootScope,   $state,   $stateParams) {
 
