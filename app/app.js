@@ -1,13 +1,15 @@
 (function(angular){
 'use strict';
 
+// require applevel scripts with no dependencies
 require('modernizr');
+// require app level css, css dependencies are declared within the css 
 require('./app.css');
 
 // Declare app level module which depends on views, and components
 module.exports =  angular.module('app', [
-  require('ui.router').name,
-  require('./views/view1/view1.js').name,
+  require('ui.router').name, /*require external dependencies such as angular modules by their name instead of by file forincreased readability*/
+  require('./views/view1/view1.js').name, /*require internal dependencies by filename*/
   require('./views/view2/view2.js').name,
   require('./components/version/version.js').name
 ])
@@ -17,15 +19,8 @@ module.exports =  angular.module('app', [
 
       $stateProvider
         .state("app", {
-		   // With abstract set to true, that means this state can not be explicitly activated.
-          // It can only be implicitly activated by activating one of its children.
           abstract: true,
-
-          // By default, templateswill populate the ui-view within the parent state's template.
-          // For top level states, like this one, the parent template is
-          // the index.html file. So this template will be inserted into the
-          // ui-view within index.html.
-          template: require('./views/views.html') 
+          template: require('./views/views.html')/* inline partials within module */ 
         });
 
 }])
@@ -40,5 +35,5 @@ module.exports =  angular.module('app', [
 }]);
 
 
-})(require('angular'));
+})(require('angular')/*require angular by name*/);
 

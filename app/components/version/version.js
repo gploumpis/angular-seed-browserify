@@ -8,4 +8,4 @@ module.exports = angular.module('app.version', [
 
 .value('version', require('../../../package.json').version);
 
-})(require('angular'))
+})(require('angular'));
