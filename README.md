@@ -226,3 +226,8 @@ http-server -a localhost -p 8000
 
 Alternatively, you can choose to configure your own webserver, such as apache or nginx. Just
 configure your server to serve the files under the `dist/` directory.
+
+
+### TODO
+
+Integrate with travis for CI

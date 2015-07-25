@@ -55,11 +55,20 @@
     "angular": "./app/bower_components/angular/angular.js",
     "ngRoute": "./app/bower_components/angular-route/angular-route.js",
     "ngMock": "./app/bower_components/angular-mocks/angular-mocks.js",
-    "ui.router":"./app/bower_components/angular-ui-router/release/angular-ui-router.js",
-    "modernizr":"./app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"
+    "ui.router": "./app/bower_components/angular-ui-router/release/angular-ui-router.js",
+    "modernizr": "./app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.js",
+    "jQuery":"./app/bower_components/jquery/dist/jquery.js",
+    "bootstrap":"./app/bower_components/bootstrap/dist/js/bootstrap.js"
   },
   "browserify-shim": {
+    "jQuery":{
+      "exports":"global:jQuery"
+    },
+    "bootstrap":{
+      "depends":["jQuery:jQuery"]
+    },
     "angular": {
+      "depends":["jQuery:jQuery"],
       "exports": "angular"
     },
     "ngRoute": {
@@ -86,5 +95,6 @@
   },
   "browserify-css": {
     "rootDir": "./dist"
-  }
+  },
+  "dependencies": {}
 }

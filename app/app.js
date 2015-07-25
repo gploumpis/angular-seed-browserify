@@ -3,8 +3,11 @@
 
 // require applevel scripts with no dependencies
 require('modernizr');
+require('bootstrap');
+
 // require app level css, css dependencies are declared within the css 
 require('./app.css');
+
 
 // Declare app level module which depends on views, and components
 module.exports =  angular.module('app', [
