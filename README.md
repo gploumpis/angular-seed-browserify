@@ -230,4 +230,7 @@ configure your server to serve the files under the `dist/` directory.
 
 ### TODO
 
-Integrate with travis for CI
+* Integrate with travis for CI
+* Showcase i18n
+* Incorporate live reload of SPA on build
+* Showcase protractor Page Objects 
