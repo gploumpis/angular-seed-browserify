@@ -1,0 +1,10 @@
+{
+  "en":"English",
+  "el":"Greek",		
+  "view1": {
+    "caption": "view 1"
+  },
+  "view2": {
+    "caption": "view 2"
+  }
+}

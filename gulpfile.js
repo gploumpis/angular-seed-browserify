@@ -28,7 +28,7 @@ gulp.task('default', ['js','assets']);
 
 
 function assets(){
-	 return gulp.src(['app/index.html']).pipe(gulp.dest('dist/'));
+	 return gulp.src(['app/index.html','app/**/*-i18n.json']).pipe(gulp.dest('dist/'));
 }
 
 function bundle() {
