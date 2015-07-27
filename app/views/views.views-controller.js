@@ -2,13 +2,26 @@
 
 	'use strict';
 
-	module.exports =angular.module('app.views.views-controller', [])
-	.controller('ViewsCtrl', ['$scope',function ViewsCtrl($scope) { /*controllers should move to a file and angular moduleof their own for testing purpoces*/
+	module.exports =angular.module('app.views.views-controller', [
+		require('pascalprecht.translate').name
+	])
+	.controller('ViewsCtrl', ['$scope','$translate','$translatePartialLoader',function ViewsCtrl($scope,$translate,$translatePartialLoader) { 
 		var appPackage = require('../../package.json');
+		
+		$translatePartialLoader.addPart('views');
+
 		$scope.project={
 			name:appPackage.name,
-			description:appPackage.description
+			description:appPackage.description,
+			
 		};
+
+		$scope.changeLang=changeLang;
+		
+
+		function changeLang(lang){
+			$translate.use(lang);
+		}
 	}]);
 
 })(require('angular'));

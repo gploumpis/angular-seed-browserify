@@ -12,27 +12,36 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand text-uppercase" href="#/">{{project.name}}</a>
+          <a class="navbar-brand text-uppercase" ng-href="#/">{{project.name}}</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li ng-class="{ active: $state.includes('app.view1') }"><a ui-sref=".view1">View 1</a></li>
-            <li ng-class="{ active: $state.includes('app.view2') }"><a ui-sref=".view2">View 2</a></li>
+            <li ng-class="{ active: $state.includes('app.view1') }"><a ui-sref=".view1">{{'view1.caption'|translate}}</a></li>
+            <li ng-class="{ active: $state.includes('app.view2') }"><a ui-sref=".view2">{{'view2.caption'|translate}}</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a ng-href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a ng-href>Action</a></li>
+                <li><a ng-href>Another action</a></li>
+                <li><a ng-href>Something else here</a></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a ng-href>Separated link</a></li>
+                <li><a ng-href>One more separated link</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a ng-href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span translate="{{lang}}"></span><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href ng-class="{ active: lang==='el'}" ng-click="changeLang('el')">{{'el'|translate}}</a></li>
+                <li><a href ng-class="{ active: lang==='en'}" ng-click="changeLang('en')">{{'en'|translate}}</a></li>
               </ul>
             </li>
           </ul>
           
         </div><!--/.nav-collapse -->
+        <!-- Split button -->
+
       </div>
     </nav>
 

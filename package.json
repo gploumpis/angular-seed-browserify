@@ -55,10 +55,12 @@
     "angular": "./app/bower_components/angular/angular.js",
     "ngRoute": "./app/bower_components/angular-route/angular-route.js",
     "ngMock": "./app/bower_components/angular-mocks/angular-mocks.js",
+    "ngCookies":"./app/bower_components/angular-cookies/angular-cookies.js",
     "ui.router": "./app/bower_components/angular-ui-router/release/angular-ui-router.js",
     "modernizr": "./app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.js",
     "jQuery":"./app/bower_components/jquery/dist/jquery.js",
-    "bootstrap":"./app/bower_components/bootstrap/dist/js/bootstrap.js"
+    "bootstrap":"./app/bower_components/bootstrap/dist/js/bootstrap.js",
+    "pascalprecht.translate":"./app/vendor/angular-translate-commonjs.js"
   },
   "browserify-shim": {
     "jQuery":{
@@ -76,6 +78,12 @@
         "angular:angular"
       ],
       "exports": "angular.module('ngRoute')"
+    },
+    "ngCookies": {
+      "depends": [
+        "angular:angular"
+      ],
+      "exports": "angular.module('ngCookies')"
     },
     "ui.router": {
       "depends": [
